@@ -1,0 +1,14 @@
+{
+  "name": "Android Studio",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "runArgs": ["--device=/dev/kvm", "--privileged", "--shm-size=2g"],
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Android Studio (noVNC)",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "onCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "vscode"
+}
